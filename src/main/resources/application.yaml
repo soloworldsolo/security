@@ -4,3 +4,12 @@ server:
 spring:
   application:
     name: solo-security
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/soloworld?useSSL=false&AllowPublicKeyRetrieval=true
+    username: root
+    password: soloworld
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    hibernate:
+      ddl-auto: update

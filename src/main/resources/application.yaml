@@ -2,6 +2,13 @@ server:
   port: 8090
 
 spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          jwk-set-uri: http://localhost:8080/realms/spring-security/protocol/openid-connect/certs
+
+
   application:
     name: solo-security
   datasource:
@@ -16,3 +23,6 @@ spring:
     properties:
       hibernate:
         showsql: true
+
+
+
